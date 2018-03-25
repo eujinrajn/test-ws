@@ -11,7 +11,7 @@
         <!-- CXF is used heavily by Mule for web services -->
         <AsyncLogger name="org.apache.cxf" level="WARN"/>
 
-        <!-- Apache Commons tend to make a lot of noise which can clutter the log-->
+        <!-- Apache Commons tend to make a lot of noise which can clutter the log  test-->
         <AsyncLogger name="org.apache" level="WARN"/>
 
         <!-- Reduce startup noise -->
