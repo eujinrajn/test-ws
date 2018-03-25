@@ -25,8 +25,49 @@
 				<version>${mule.tools.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-                    <copyToAppsDirectory>true</copyToAppsDirectory>
+					<copyToAppsDirectory>true</copyToAppsDirectory>
+					<inclusions>
+						<inclusion>
+							<groupId>com.mulesoft.security</groupId>
+							<artifactId>mule-module-security-property-placeholder</artifactId>
+						</inclusion>
+						<inclusion>
+							<groupId>org.mule.modules</groupId>
+							<artifactId>mule-module-cloudhub</artifactId>
+						</inclusion>
+					</inclusions>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<deploymentType>cloudhub</deploymentType>
+					<muleVersion>${mule.version}</muleVersion>
+					<username>${anypoint.platform.username}</username>
+					<password>${anypoint.platform.password}</password>
+					<redeploy>${anypoint.platform.redeploy}</redeploy>
+					<environment>${anypoint.platform.environment}</environment>
+					<applicationName>${project.artifactId}</applicationName>
+					<properties>
+						<mule.env>${mule.env}</mule.env>
+						<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
+						<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
+					</properties>
+					<workerType>${anypoint.platform.workertype}</workerType>
+					<workers>${anypoint.platform.workers}</workers>
+					<region>${anypoint.platform.region}</region>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
