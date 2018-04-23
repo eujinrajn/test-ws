@@ -15,7 +15,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
         <poll doc:name="Poll">
             <logger message="++++Entry Point GET customers++++" level="INFO" doc:name="logStart"/>
         </poll>
-        <logger message="+++++ New name is : ${name} ++++++" level="INFO" doc:name="Logger"/>
+        <logger message="+++++ New customer name is : ${name} ++++++" level="INFO" doc:name="Logger"/>
 
         <logger message="++++Exit Point GET customers ++++" level="INFO" doc:name="logEnd"/>
     </flow>
