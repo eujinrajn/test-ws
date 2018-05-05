@@ -13,10 +13,21 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     <context:property-placeholder location="test-ws-${mule.env}.properties"/>
     <flow name="test-service-newFlow">
         <poll doc:name="Poll">
-            <logger message="++++Entry Point GET customers++++" level="INFO" doc:name="logStart"/>
+            <fixed-frequency-scheduler frequency="30000"/>
+            <logger message="++++ Entry GET Order Status ++++" level="INFO" doc:name="logStart"/>
         </poll>
-        <logger message="+++++ New name is : ${name} ++++++" level="INFO" doc:name="Logger"/>
+        <set-payload value="#['[{
+        &quot;orderId&quot;: &quot;I1234&quot;,
+        &quot;orderType&quot;: &quot;ABC&quot;,
+        &quot;status&quot;: &quot;Completed&quot;
+ },
+ {
+        &quot;orderId&quot;: &quot;I5678&quot;,
+        &quot;orderType&quot;: &quot;DEF&quot;,
+        &quot;status&quot;: &quot;InProgress&quot;
+ }]']" doc:name="setPayload"/>
+        <logger message="#[payload]" level="INFO" doc:name="logPayload"/>
 
-        <logger message="++++Exit Point GET customers ++++" level="INFO" doc:name="logEnd"/>
+        <logger message="++++ Exit GET Order Status ++++" level="INFO" doc:name="logEnd"/>
     </flow>
 </mule>
