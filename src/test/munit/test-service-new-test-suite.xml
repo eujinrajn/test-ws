@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
         <spring:import resource="classpath:test-service-new.xml"/>
     </spring:beans>
     <munit:test name="test-service-new-test-suite-test-service-newFlowTest" description="Test">
-        <flow-ref name="test-service-newFlow" doc:name="Flow-ref to test-service-newFlow"/>
+        <flow-ref name="getOrderStatus" doc:name="Flow-ref to getOrderSTatus"/>
         <munit:assert-not-null message="No response! Failure!" doc:name="Assert Not Null Payload"/>
     </munit:test>
 </mule>
