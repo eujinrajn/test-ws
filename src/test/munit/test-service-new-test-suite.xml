@@ -13,6 +13,6 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     </munit:test>
     <munit:test name="test-service-testPayload" description="Test">
         <flow-ref name="getOrderStatus" doc:name="Flow-ref to getOrderSTatus"/>
-        <munit:assert-payload-equals message="Failure! Error payload!" expectedValue="#['[{         &quot;orderId&quot;: &quot;I1234&quot;,         &quot;orderType&quot;: &quot;ABC&quot;,         &quot;status&quot;: &quot;Completed&quot;  },  {         &quot;orderId&quot;: &quot;I5678&quot;,         &quot;orderType&quot;: &quot;DEF&quot;,         &quot;status&quot;: &quot;InProgress&quot;  }]']" doc:name="Assert Payload"/>
+        <munit:assert-payload-equals message="Failure! Error payload!" expectedValue="#['[{         &quot;orderId&quot;: &quot;I1234&quot;,         &quot;orderType&quot;: &quot;ABC&quot;,         &quot;status&quot;: &quot;Completed&quot;  },  {         &quot;orderId&quot;: &quot;I5679&quot;,         &quot;orderType&quot;: &quot;DEF&quot;,         &quot;status&quot;: &quot;InProgress&quot;  }]']" doc:name="Assert Payload"/>
     </munit:test>
 </mule>
