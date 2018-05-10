@@ -22,7 +22,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
         &quot;status&quot;: &quot;Completed&quot;
  },
  {
-        &quot;orderId&quot;: &quot;I5678&quot;,
+        &quot;orderId&quot;: &quot;I5679&quot;,
         &quot;orderType&quot;: &quot;DEF&quot;,
         &quot;status&quot;: &quot;InProgress&quot;
  }]']" doc:name="setPayload"/>
