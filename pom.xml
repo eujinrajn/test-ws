@@ -50,7 +50,7 @@
 					<password>${anypoint.platform.password}</password>
 					<redeploy>${anypoint.platform.redeploy}</redeploy>
 					<environment>${anypoint.platform.environment}</environment>
-					<applicationName>${project.artifact}</applicationName>
+					<applicationName>${anypoint.project.artifactId}</applicationName>
 					<properties>
 						<mule.env>${mule.env}</mule.env>
 						<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
