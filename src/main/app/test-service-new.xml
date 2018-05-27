@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     <flow name="getOrderStatus">
         <poll doc:name="Poll">
             <fixed-frequency-scheduler frequency="30000"/>
-            <logger message="++++ Entry GET Order Status - ENV : ${mule.env} ++++" level="INFO" doc:name="logStart"/>
+            <logger message="++++ Entry GET Order Status - Env : ${mule.env} ++++" level="INFO" doc:name="logStart"/>
         </poll>
         <set-payload value="#['[{
         &quot;orderId&quot;: &quot;I1234&quot;,
