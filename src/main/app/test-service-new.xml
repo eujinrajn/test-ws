@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
             <logger message="++++ Entry GET Order Status - Env : ${mule.env} ++++" level="INFO" doc:name="logStart"/>
         </poll>
         <set-payload value="#['[{
-        &quot;orderId&quot;: &quot;I1299&quot;,
+        &quot;orderId&quot;: &quot;I1234&quot;,
         &quot;orderType&quot;: &quot;ABC&quot;,
         &quot;status&quot;: &quot;Completed&quot;
  },
